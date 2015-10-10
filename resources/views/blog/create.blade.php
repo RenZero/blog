@@ -21,7 +21,6 @@
 
         </div>
 
-
         <!-- Add Blog Form Input -->
         <div class="form-group">
 
