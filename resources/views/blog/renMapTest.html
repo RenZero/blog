@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://app.essoduke.org/js/tinyMap/jquery.tinyMap-3.3.3.1.min.js"></script>
+    <style type="text/css">
+    .map {
+        width: 640px;
+        height: 480px;
+    }
+    #map {
+        width: 640px;
+        height: 640px;
+    }
+
+    #map img {
+        padding: 2px !important;
+        background-color: white;
+        border: 1px solid #666 !important;
+        border-radius: 5px;
+    }
+    </style>
+</head>
+<body>
+  <‐‐ HTML Markup ‐‐>
+    class
+    <div class="map">class</div>
+    <script>
+      $('.map').tinyMap({
+          'center': '台北市信義區台北101',
+          'zoom'  : 14
+      });
+    </script>
+
+    id
+    <div id="map">id</div>
+    <script>
+
+        $.ajax({
+            url: "http://data.kaohsiung.gov.tw/Opendata/DownLoad.aspx?Type=2&CaseNo1=AV&CaseNo2=2&FileType=1&Lang=C&FolderType=",
+            dataType: 'json',
+            success: function(results){
+                console.log(results);
+            }
+        });
+
+
+        $('#map').tinyMap({
+            'center': ['25.039065815333753', '121.56097412109375'],
+            'zoom': 14,
+            'marker': [
+                {
+                    'addr': ['25.039065815333753', '121.56097412109375'],
+                    'text': '<strong>110台灣台北市信義區逸仙路288號</strong>',
+                    'newLabel': '文字標籤',
+                    'newLabelCSS': 'labels',
+                    // 自訂外部圖示
+                    'icon': {
+                        'url': '/big.png',
+                        'scaledSize': [48, 48]
+                    },
+                    // 動畫效果
+                    'animation': 'DROP'
+                },
+                {'addr': ['25.041282077030896', '121.56741142272949']},
+                {'addr': ['25.038521464229383', '121.55900001525879'], 'text': '<strong>110台灣台北市信義區仁愛路四段450號</strong>'}
+            ]
+        });
+
+
+    </script>
+
+</body>
+</html>
+
