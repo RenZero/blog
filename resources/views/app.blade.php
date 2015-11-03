@@ -14,6 +14,7 @@
             appblade End
         </div>
 
+        
         @yield('footer')
     </body>
 </html>
